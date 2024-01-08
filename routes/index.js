@@ -246,8 +246,9 @@ function checkBuy(req, res, next)  {
         };
 
         res.json(data);
+    } else {
+        next();
     }
-    next();
 }
 
 async function checkRows(req, res, next)  {
